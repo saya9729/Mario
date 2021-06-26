@@ -1,16 +1,20 @@
+import { PreloadScene } from './scenes/PreloadScene';
 import { GamePlayScene } from './scenes/GamePlayScene'
+import { GameUIScene } from './scenes/GameUIScene';
 export const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Mario',
   width: 400,
   height: 250,
   type: Phaser.AUTO,
   scene: [
-    GamePlayScene
+    PreloadScene,
+    GamePlayScene,
+    GameUIScene
   ],
   physics: {
     default: 'arcade',
     arcade: {
-      debug:true
+      debug:false
     }
   },
   pixelArt: true,
