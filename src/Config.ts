@@ -1,6 +1,7 @@
-import { PreloadScene } from './scenes/PreloadScene';
+import { PreloadScene } from './scenes/PreloadScene'
 import { GamePlayScene } from './scenes/GamePlayScene'
-import { GameUIScene } from './scenes/GameUIScene';
+import { GameUIScene } from './scenes/GameUIScene'
+import 'phaser/plugins/spine/dist/SpinePlugin'
 export const GameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Mario',
   width: 400,
@@ -14,12 +15,21 @@ export const GameConfig: Phaser.Types.Core.GameConfig = {
   physics: {
     default: 'arcade',
     arcade: {
-      debug:false
+      debug:true
     }
   },
   pixelArt: true,
   transparent: true,
   scale:{
     zoom: 2
+  },
+  plugins: {
+    scene: [
+      {
+        key: 'SpinePlugin',
+        plugin: window.SpinePlugin,
+        mapping: 'spine'
+      }
+    ]
   }
 };

@@ -9,6 +9,7 @@ export class PreloadScene extends Phaser.Scene{
             .audio('coin_sound','assets/sounds/coin_sound_effect.mp3')
             .audio('break_block_sound','assets/sounds/break_block_sound_effect.mp3')
             .audio('main_theme','assets/sounds/main_theme_overworld.mp3')
+            .spine('set1', 'assets/spine/demos.json', 'assets/spine/atlas1.atlas', true)
     }
     create(){
         this.scene.start('GamePlayScene')

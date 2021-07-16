@@ -17,7 +17,8 @@ export class Mario extends Phaser.GameObjects.Sprite {
         this
             .setOrigin(0.5, 1)
             .setDepth(1)
-            .scene.add.existing(this);
+            .scene.add.existing(this)
+            
 
         // physics
         this.scene.physics.world.enable(this)
